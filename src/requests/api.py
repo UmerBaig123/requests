@@ -9,6 +9,7 @@ This module implements the Requests API.
 """
 
 from . import sessions
+from .domain_filter import validate_domain_or_raise
 
 
 def request(method, url, **kwargs):
@@ -70,6 +71,7 @@ def get(url, params=None, **kwargs):
     :rtype: requests.Response
     """
 
+    validate_domain_or_raise(url)
     return request("get", url, params=params, **kwargs)
 
 
@@ -112,6 +114,7 @@ def post(url, data=None, json=None, **kwargs):
     :rtype: requests.Response
     """
 
+    validate_domain_or_raise(url)
     return request("post", url, data=data, json=json, **kwargs)
 
 

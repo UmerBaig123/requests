@@ -1,0 +1,10 @@
+{
+  "allowed_domains": [
+    "httpbin.org",
+    "www.httpbin.org",
+    "example.com",
+    "www.example.com",
+    "localhost",
+    "127.0.0.1"
+  ]
+}
